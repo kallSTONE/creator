@@ -65,12 +65,12 @@ export default function HeroVideo() {
   return (
     <div className="relative w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-lg">
       {/* YouTube player */}
-      <div ref={containerRef} className="absolute inset-0 pointer-events-none" />
+      <div ref={containerRef} className="absolute w-full h-full aspect-video inset-0 pointer-events-none" />
 
       {/* Custom mute button */}
       <button
         onClick={toggleMute}
-        className="absolute bottom-4 right-4 z-10 rounded-full bg-black/60 p-2 text-white hover:bg-black/80 transition"
+        className="relative h-10 w-10 top-2 left-2 z-112 rounded-full bg-black/50 p-2 text-white hover:bg-black/85 transition"
         aria-label={muted ? 'Unmute video' : 'Mute video'}
       >
         {muted ? '🔇' : '🔊'}
