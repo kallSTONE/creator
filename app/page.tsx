@@ -1,60 +1,126 @@
+// import Link from 'next/link'
+// import { Button } from '@/components/ui/button'
+// import { Card } from '@/components/ui/card'
+// import CourseCarousel from '@/components/home/course-carousel'
+// import ArticleGrid from '@/components/home/article-grid'
+// import SuccessStories from '@/components/home/success-stories'
+// import NewsletterSignup from '@/components/home/newsletter-signup'
+// import Image from 'next/image'
+// import BgL1 from '@/public/assets/images/lawST2-.png'
+
+// export default function Home() {
+//   return (
+//     <div className="flex flex-col sm:items-center">
+//       {/* Hero Section */}
+//       <section className="relative items-center flex flex-col bg-gradient-to-r from-background dark:via-blue-900/20 via-blue-900/15 to-transparent overflow-hidden w-full py-2 pl-12 pr-6 ">
+
+//         <div className="z-10 w-auto md:hidden bg-transparent h-[300px] overflow-hidden ">
+//           <Image src={BgL1} draggable="false" alt="Tesfa Logo" className="w-auto h-[400px] rounded-l-[150px] rounded-r-[50px]  bg-transparent" />
+//         </div>
+
+//         <div className="flex-col items-center text-center z-10 py-12 md:py-20 md:w-[55%] bg-transparent ">
+//           <div className="w-auto flex-col items-center text-center ">
+//             <h1 className=" text-center font-montserrat text-3xl md:text-5xl lg:text-6xl font-bold tracking-tigh ">
+//               ስለ አንድ ክሪየተር / ኢንፍሉንሰር የተሰራ ስልጠና
+//             </h1>
+
+//             <p className="mt-4 text-lg md:text-xl text-center text-muted-foreground">
+//               ይህ መድረክ በአንድ ክሪየተር (Creator) ወይም ኢንፍሉንሰር የተሰጠ ስልጠናዎችን ይሰጣል። እዚህ ላይ የተመረጡ ኮርሶች በአንድ ሰው በተለየ እርምጃ ይቀርባሉ።
+//             </p>
+
+//             <div className="mt-6 flex flex-col items-center gap-4 w-full">
+//               <div className="mt-4 sm:mt-0 flex items-centergap-3">
+//                 <Button size="lg" asChild>
+//                   <Link href="/learn">Explore programs</Link>
+//                 </Button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Hero Video                     src="https://www.youtube.com/embed/sia3pPtCTdk?autoplay=1&mute=1&playsinline=1&rel=0"
+//  */}
+//         <div className="z-10 hidden md:flex w-full justify-center bg-transparent py-12">
+//           {/* <div className="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-lg">
+//             <iframe
+//               className="w-full h-full"
+              
+//               src="https://www.youtube.com/embed/sia3pPtCTdk?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3"
+//               title="Tesfa Hero Video"
+//               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+//               allowFullScreen
+//             />
+//           </div> */}
+
+
+//           <div className="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-lg">
+//             <iframe
+//               className="w-full max-w-3xl h-full aspect-video rounded-xl overflow-hidden shadow-lg pointer-events-none"
+//               src="https://www.youtube.com/embed/sia3pPtCTdk?autoplay=1&mute=1&playsinline=1&loop=1&playlist=sia3pPtCTdk&controls=0&rel=0&modestbranding=1&iv_load_policy=3"
+//               title="Tesfa Hero Video"
+//               allow="autoplay; encrypted-media"
+//               allowFullScreen
+//             />
+//           </div>
+
+//         </div>
+
+
+//         <div className="absolute z-1 inset-0 bg-gradient-to-r from-blue-900/10 via-blue-600/5 dark:via-background via-background to-transparent" />
+
+//       </section>
+
+
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
 import CourseCarousel from '@/components/home/course-carousel'
 import ArticleGrid from '@/components/home/article-grid'
 import SuccessStories from '@/components/home/success-stories'
 import NewsletterSignup from '@/components/home/newsletter-signup'
 import Image from 'next/image'
 import BgL1 from '@/public/assets/images/lawST2-.png'
+import HeroVideo from '@/components/home/HeroVideo'
+
 
 export default function Home() {
   return (
     <div className="flex flex-col sm:items-center">
       {/* Hero Section */}
-      <section className="relative flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-background dark:via-blue-900/20 via-blue-900/15 to-transparent overflow-hidden w-full py-2 pl-12 pr-6 ">
+      <section className="relative flex flex-col items-center w-full overflow-hidden bg-gradient-to-r from-background via-blue-900/15 dark:via-blue-900/20 to-transparent py-2 pl-12 pr-6">
 
-        <div className="z-10 w-auto md:hidden bg-transparent h-[300px] overflow-hidden ">
-          <Image src={BgL1} draggable="false" alt="Tesfa Logo" className="w-auto h-[400px] rounded-l-[150px] rounded-r-[50px]  bg-transparent" />
+        {/* Mobile image */}
+        <div className="z-10 md:hidden h-[300px] overflow-hidden">
+          <Image
+            src={BgL1}
+            draggable={false}
+            alt="Tesfa Logo"
+            className="h-[400px] w-auto rounded-l-[150px] rounded-r-[50px]"
+          />
         </div>
 
-        <div className="container z-10 py-12 md:py-20 md:w-[55%] bg-transparent">
-          <div className="w-auto text-center md:text-left">
-            <h1 className="font-montserrat text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              ስለ አንድ ክሪየተር / ኢንፍሉንሰር የተሰራ ስልጠና
-            </h1>
+        {/* Text */}
+        <div className="z-10 py-12 text-center md:py-20 md:w-[55%]">
+          <h1 className="font-montserrat text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            ስለ አንድ ክሪየተር / ኢንፍሉንሰር የተሰራ ስልጠና
+          </h1>
 
-            <p className="mt-4 text-lg md:text-xl text-muted-foreground">
-              ይህ መድረክ በአንድ ክሪየተር (Creator) ወይም ኢንፍሉንሰር የተሰጠ ስልጠናዎችን ይሰጣል። እዚህ ላይ የተመረጡ ኮርሶች በአንድ ሰው በተለየ እርምጃ ይቀርባሉ።
-            </p>
+          <p className="mt-4 text-lg text-muted-foreground md:text-xl">
+            ይህ መድረክ በአንድ ክሪየተር ወይም ኢንፍሉንሰር የተሰጠ ስልጠናዎችን ይሰጣል።
+          </p>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-4 w-full items-center md:items-start sm:justify-start">
-              <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold">ሲ</div>
-                <div className="text-left">
-                  <p className="font-semibold">ስም: ክሪየተር ሳማኤል</p>
-                  <p className="text-sm text-muted-foreground">ሙዚቃ/ትምህርት ክሪየተር — ስልጠናዎች በፍጥነት ማስተላለፊያ</p>
-                </div>
-              </div>
-
-              <div className="mt-4 sm:mt-0 flex gap-3">
-                <Button size="lg" asChild>
-                  <Link href="/learn">ስልጠናዎች ይጀምሩ</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="/about">ለ Creator ይገለጹ</Link>
-                </Button>
-              </div>
-            </div>
+          <div className="mt-6">
+            <Button size="lg" asChild>
+              <Link href="/learn">Explore programs</Link>
+            </Button>
           </div>
         </div>
 
-        <div className="z-10 w-[45%] hidden md:block bg-transparent h-[400px] overflow-hidden ">
-          <Image src={BgL1} draggable="false" alt="Tesfa Logo" className="w-[450px] h-[400px] rounded-l-[150px] rounded-r-[50px]  bg-transparent" />
+        {/* Hero Video (desktop only) */}
+        <div className="z-10 hidden w-full justify-center py-12 md:flex">
+          <HeroVideo />
         </div>
 
-        <div className="absolute z-1 inset-0 bg-gradient-to-r from-blue-900/10 via-blue-600/5 dark:via-background via-background to-transparent" />
-
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-background to-transparent" />
       </section>
 
       {/* Performance */}

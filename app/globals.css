@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scroll for in-page anchors */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -9,8 +14,10 @@
 }
 
 ::selection {
-  background-color: #02270d1f; /* e.g., Tailwind blue-300 */
-  color: rgba(2, 24, 15, 0.877); /* Optional: text color during selection */
+  background-color: #02270d1f;
+  /* e.g., Tailwind blue-300 */
+  color: rgba(2, 24, 15, 0.877);
+  /* Optional: text color during selection */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,8 +31,10 @@
 @layer base {
   :root {
     /* Base */
-    --background: 220 25% 98%;        /* Clean light canvas */
-    --foreground: 222 22% 15%;        /* Deep slate text */
+    --background: 220 25% 98%;
+    /* Clean light canvas */
+    --foreground: 222 22% 15%;
+    /* Deep slate text */
 
     /* Surfaces */
     --card: 0 0% 100%;
@@ -35,7 +44,8 @@
     --popover-foreground: 222 22% 15%;
 
     /* Brand (Creator Violet / Indigo) */
-    --primary: 252 85% 60%;           /* Vibrant creator purple */
+    --primary: 252 85% 60%;
+    /* Vibrant creator purple */
     --primary-foreground: 0 0% 100%;
 
     /* Secondary (Cool contrast) */
@@ -43,7 +53,8 @@
     --secondary-foreground: 222 22% 15%;
 
     /* Accent (Used for highlights, badges, links) */
-    --accent: 190 90% 45%;            /* Cyan pop */
+    --accent: 190 90% 45%;
+    /* Cyan pop */
     --accent-foreground: 0 0% 100%;
 
     /* Muted UI */
@@ -66,12 +77,14 @@
     --chart-4: 35 90% 55%;
     --chart-5: 160 65% 45%;
 
-    --radius: 0.75rem; /* modern, creator-friendly */
+    --radius: 0.75rem;
+    /* modern, creator-friendly */
   }
 
   .dark {
     /* Background */
-    --background: 222 30% 6%;         /* Studio black */
+    --background: 222 30% 6%;
+    /* Studio black */
     --foreground: 220 20% 92%;
 
     /* Surfaces */
@@ -82,7 +95,8 @@
     --popover-foreground: 220 20% 92%;
 
     /* Brand */
-    --primary: 252 90% 68%;           /* Glows nicely on dark */
+    --primary: 252 90% 68%;
+    /* Glows nicely on dark */
     --primary-foreground: 222 30% 6%;
 
     /* Secondary */
@@ -120,6 +134,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

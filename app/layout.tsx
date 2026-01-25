@@ -40,7 +40,7 @@ export default function RootLayout({
           enableSystem
         >
           <SupabaseProvider>
-            <Header />
+            {/* <Header /> */}
             <main className="flex-grow w-full">
               {children}
             </main>
