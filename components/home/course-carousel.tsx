@@ -80,7 +80,7 @@ export default function CourseCarousel() {
   }, [])
 
   return (
-    <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
+    <div className="grid gap-6 grid-row-[repeat(auto-fit,minmax(250px,1fr))] place-items-center border border-red-900">
       {courses.map((course) => (
         <CourseCard key={course.id} course={course} />
       ))}
@@ -96,7 +96,7 @@ export default function CourseCarousel() {
 
 function CourseCard({ course }: { course: Course }) {
   return (
-    <Card className="flex flex-col h-full overflow-hidden hover:shadow-md transition">
+    <Card className="flex flex-col w-[75%] overflow-hidden hover:shadow-md transition">
       <div className="aspect-video relative">
         <img src={course.image} className="object-cover w-full h-full" />
         <Badge className="absolute top-3 left-3">{course.category}</Badge>

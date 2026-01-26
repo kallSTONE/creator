@@ -51,9 +51,9 @@ export default function Home() {
       </section>
 
       {/* Performance */}
-      <section className="py-10 my-2 bg-muted/30 w-full flex flex-col">
+      <section className="py-10 my-2 w-full flex flex-col bg-gradient-to-r from-background via-blue-900/15 dark:via-blue-900/20 to-transparent ">
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-grey-900 p-6 rounded-lg">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-grey-900/20 p-6 rounded-lg ">
           <div className="text-center">
             <p className="text-3xl font-bold">50</p>
             <p className="text-sm text-muted-foreground">ስልጠናዎች</p>
