@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Lock } from 'lucide-react'
 import type { Creator } from '@/data/creators'
+import { CourseHero } from '@/components/course/CourseHero'
 
 interface Course {
   id: number
@@ -15,6 +16,7 @@ interface Course {
   creator: Creator
   published: boolean
   available_label?: string
+  introVideoUrl?: string
 }
 
 export default function CourseSection({ course }: { course: Course }) {
@@ -33,8 +35,13 @@ export default function CourseSection({ course }: { course: Course }) {
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col justify-end items-center px-6 pb-8 text-white md:px-16">
 
-        <div className='border border-red-900 w-[900px] h-[450px] mb-8 flex items-center justify-center bg-black/50'>
-          Intro video
+        <div className="w-full max-w-5xl mb-8">
+          <CourseHero
+            videoUrl={course.introVideoUrl}
+            poster={course.image}
+            title={course.title}
+            description={course.description}
+          />
         </div>
 
         <div className='relative flex flex-row w-full items-end'>
@@ -54,7 +61,7 @@ export default function CourseSection({ course }: { course: Course }) {
           {/* Course info */}
           <div className='ml-[35%] border border-red-900'>
             <span className="mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-400">
-              {course.category}              
+              {course.category}
             </span>
 
             <h1 className="max-w-4xl text-3xl font-bold leading-tight md:text-5xl">

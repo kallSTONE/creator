@@ -16,6 +16,7 @@ interface Course {
   creator: Creator
   published: boolean
   available_label?: string
+  introVideoUrl?: string
   url?: string
 }
 
@@ -26,14 +27,18 @@ export default function CourseCarousel() {
     const fetchCourses = async () => {
       const { data } = await supabase
         .from('courses')
-        .select('*')
+        .select('*, course_media(*)')
         .eq('published', true)
         .order('id', { ascending: true })
 
       if (!data) return
 
-      const mapped = data.map((c) =>
-        attachCreatorToCourse({
+      const mapped = data.map((c) => {
+        const introVideo = c.course_media?.find(
+          (m: any) => m.type === 'intro' && m.provider === 'youtube'
+        )
+
+        return attachCreatorToCourse({
           id: c.id,
           slug: c.slug,
           title: c.title,
@@ -42,8 +47,9 @@ export default function CourseCarousel() {
           category: c.category,
           published: c.published ?? false,
           available_label: c.available_label,
+          introVideoUrl: introVideo?.url,
         })
-      )
+      })
 
       setCourses(mapped)
     }
