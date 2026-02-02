@@ -33,6 +33,10 @@ export default function CourseSection({ course }: { course: Course }) {
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col justify-end items-center px-6 pb-8 text-white md:px-16">
 
+        <div className='border border-red-900 w-[900px] h-[450px] mb-8 flex items-center justify-center bg-black/50'>
+          Intro video
+        </div>
+
         <div className='relative flex flex-row w-full items-end'>
 
           {/* Creator info*/}
@@ -48,7 +52,7 @@ export default function CourseSection({ course }: { course: Course }) {
           </div>
 
           {/* Course info */}
-          <div className='ml-[35%] '>
+          <div className='ml-[35%] border border-red-900'>
             <span className="mb-2 text-sm font-semibold uppercase tracking-widest text-emerald-400">
               {course.category}              
             </span>

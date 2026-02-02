@@ -18,11 +18,11 @@ export default function Home() {
         {/* Text */}
         <div className="z-10 py-6 text-center md:py-20 md:w-[55%]">
           <h1 className="font-montserrat text-3xl font-bold tracking-tight md:text-5xl lg:text-6xl select-none">
-            ስለ አንድ ክሪየተር / ኢንፍሉንሰር የተሰራ ስልጠና
+            ዲጂታል ክህሎቶን በማሳደግ የተጨማሪ ደምወዝ ተከፋይ ይሁኑ
           </h1>
 
           <p className="mt-4 text-lg text-muted-foreground md:text-xl select-none">
-            ይህ መድረክ በአንድ ክሪየተር ወይም ኢንፍሉንሰር የተሰጠ ስልጠናዎችን ይሰጣል።
+            Video Editing, Website Development, AI Fundamentals ስልጠናዎችን እንሰጣለን።
           </p>
 
           <div className="mt-6">

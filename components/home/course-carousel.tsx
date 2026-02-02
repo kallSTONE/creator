@@ -16,6 +16,7 @@ interface Course {
   creator: Creator
   published: boolean
   available_label?: string
+  url?: string
 }
 
 export default function CourseCarousel() {

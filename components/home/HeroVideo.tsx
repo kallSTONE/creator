@@ -70,10 +70,10 @@ export default function HeroVideo() {
       {/* Custom mute button */}
       <button
         onClick={toggleMute}
-        className="relative h-10 w-10 top-2 left-2 z-112 rounded-full bg-black/50 p-2 text-white hover:bg-black/85 transition"
+        className="relative h-10 w-fit flex flex-row justify-center items-center z-112 rounded-full bg-black/50 p-2 text-white/87 hover:bg-black/85 transition"
         aria-label={muted ? 'Unmute video' : 'Mute video'}
       >
-        {muted ? '🔇' : '🔊'}
+        {muted ? '🔇 unmute' : '🔊 mute'}
       </button>
     </div>
   )
